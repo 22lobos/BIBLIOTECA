@@ -16,6 +16,19 @@ public List<Libro> obteLibros() {
     return listarLibros;
     }
 
+    public Libro buscarPorId(int id ){
+        for (Libro libro : listarLibros){
+            if (libro.getId() == id) {
+                return libro;
+            }
+        }
+
+        return null;
+    }   
+    
+    
+    
+    }
 
     
-}
+
