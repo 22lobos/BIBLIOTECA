@@ -30,14 +30,14 @@ public class LibroController {
 
     }  
       @PostMapping
-    public String agregarLibro( @RequestBody  Libro libro ) {
+    public Libro agregarLibro( @RequestBody  Libro libro ) {
         
-        return libroServise.saveLibro(libro).toString();
+        return libroServise.saveLibro(libro);
 
-        
+
     }
     @GetMapping("/{id}")
-    public String getMethodName(@RequestParam String param) {
+    public  Libro (@RequestParam String param) {
         return new String();
     }
     
