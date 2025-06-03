@@ -37,24 +37,20 @@ public class LibroController {
 
     }
     @GetMapping("/{id}")
-    public  Libro (@RequestParam String param) {
-        return new String();
+    public  Libro buscarLibroPorId(@RequestBody int id) {
+        return libroServise.getLibroById(id);
     }
-    
-    public Libro agregaLibro(@RequestBody Libro libro) {
-        return libroServise.saveLibro(libro);
+      
         
-        
-    } 
-    @GetMapping("/{id}")
+    @PutMapping("/{id}")
     public Libro actualizaLibro(@PathVariable int id, @RequestBody Libro libro) {
         
         return libroServise.updateLibro(libro);
         
         
     }
-    @GetMapping("/{id}")
     
+    @DeleteMapping("/{id}")
     public String eliminaLibro(@PathVariable int id) {
         return libroServise.deleteLibro(id);
         
