@@ -21,6 +21,17 @@ public class LibroController {
 
     public List<Libro> listarLibros() {
         return libroServise.obtenerLibros();
+
+
+    }    @GetMapping("/{id}")
+    public Libro agregaLibro(@RequestBody Libro libro) {
+        return libroServise.saveLibro(libro);
+        
+        
+    }
+    public Libro actualizaLibro(@PathVariable int id, @RequestBody Libro libro) {
+        
+        return libroServise.updateLibro(libro);
         
         
     }
