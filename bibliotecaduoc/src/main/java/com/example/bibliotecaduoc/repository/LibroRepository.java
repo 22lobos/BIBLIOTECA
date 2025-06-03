@@ -57,12 +57,17 @@ public List<Libro> obteLibros() {
 
 
 
-
-
-}
-
     
+
     }
 
-    
 
+    public void eliminar(int id) {
+        for (int i = 0; i < listarLibros.size(); i++) {
+            if (listarLibros.get(i).getId() == id) {
+                listarLibros.remove(i);
+                break;
+            }
+        }
+    }
+}
