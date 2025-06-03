@@ -1,8 +1,9 @@
 package com.example.bibliotecaduoc.service;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.bibliotecaduoc.model.Libro;
 import com.example.bibliotecaduoc.repository.LibroRepository;
-import org.springframework.stereotype.service;
+
 
 
 import java.util.List;
@@ -26,6 +27,14 @@ public class LibroServise {
     public Libro getLibroById(int id) {
         return libroRepository.buscarPorId(id);
     }
+    public Libro  updateLibro(Libro libro) {
+        return libroRepository.actualizar(libro);
+    }
+    public String deleteLibro(int id) {
+    libroRepository.eliminar(id);
+    return "Libro eliminado con exito";
+    }
+
 
 
 }
