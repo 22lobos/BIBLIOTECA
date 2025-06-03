@@ -36,7 +36,10 @@ public class LibroController {
         
     }
     
-
+    public String eliminaLibro(@PathVariable int id) {
+        return libroServise.deleteLibro(id);
+        
+    }
 
 
     
