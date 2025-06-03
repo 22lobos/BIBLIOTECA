@@ -27,6 +27,13 @@ public List<Libro> obteLibros() {
     }   
     
     
+    public Libro guardar(Libro lib){
+        listarLibros.add(lib);
+        return lib;
+    }
+
+
+    
     
     }
 
